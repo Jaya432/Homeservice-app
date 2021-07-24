@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/navbar'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron" style="background-color: lemonchiffon;">
+        <img src="https://www.dealsshutter.com/blog/wp-content/uploads/2020/03/homeservice.jpg"width="100%" height="400px" alt="home-img"><br><br>
+            <h1 style="font-weight:bolder; font-size: 3rem; display: flex; justify-content: center; align-items: center;" >Services</h1>
+
+
+            <div style="margin: 2rem 0">
+                <% service.forEach(data => { %>
+                    <p style="font-weight: 600;"><%= data.servicing %></p>
+                        <ul>
+                            <li>Available Services--> <%= data.whatwedo %></li>
+                            <li>Offer for new users--> <%= data.offer %></li>
+                        </ul>
+                    <% }) %>
+            </div> <br>
+            <h1 style="display: flex; justify-content: center; align-items: center;">Why Choose Us?</h1>
+            <br><br>
+            <p>Scarlet is the most convenient and hassle free way to get your household work done. With handcrafted mobile solutions, unmatched service quality, and background verified providers who are always willing to lend a hand, we aim to aid in solving all your household problems with efficiency, ease and most importantly, a personal touch.</p>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>
